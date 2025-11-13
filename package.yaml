@@ -1,0 +1,18 @@
+dependencies:
+- base >= 4.12 && < 5
+- stm
+- async
+- text
+- bytestring
+- time
+- containers
+- unordered-containers
+- criterion
+- hspec
+- network     
+- random       
+
+executables:
+  render:
+    source-dirs: src
+    main: Main.hs
