@@ -8,7 +8,7 @@ import Control.Concurrent (forkIO)
 import Control.Monad (forever, unless)
 import Control.Exception (bracket)
 
--- ĐỔI TÊN BIẾN Ở ĐÂY CHO KHỎI TRÙNG
+
 serverPort :: String
 serverPort = "8080"
 
