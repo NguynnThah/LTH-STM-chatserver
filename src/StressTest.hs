@@ -56,12 +56,10 @@ runClient clientId = do
   hPutStrLn handle $ "JOIN " ++ chaosRoom
   hFlush handle
   
-  -- SỬA TÊN HÀM Ở ĐÂY
   forkIO $ listenToServer handle
   
   chaosLoop handle username
 
--- SỬA TÊN HÀM Ở ĐÂY (Đổi từ listen thành listenToServer)
 listenToServer :: Handle -> IO ()
 listenToServer handle = forever $ do
   _ <- hGetLine handle 

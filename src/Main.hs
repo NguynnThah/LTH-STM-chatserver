@@ -14,7 +14,7 @@ import System.IO
 import Network.Socket
 
 -- ==========================================
--- PHẦN 1: CORE LOGIC STM (GIỮ NGUYÊN & NÂNG CẤP)
+-- PHẦN 1: CORE LOGIC STM 
 -- ==========================================
 
 type ClientId = Int
@@ -77,7 +77,7 @@ leaveRoom srv room cid = atomically $ do
         Just tv -> modifyTVar' tv (filter (/= cid))
         Nothing -> return ()
 
--- NÂNG CẤP: Logic gửi tin nhắn Broadcast ra mạng thật
+-- Logic gửi tin nhắn Broadcast ra mạng thật
 broadcastToRoom :: Server -> RoomName -> Text -> IO ()
 broadcastToRoom srv room msg = do
     -- 1. Dùng STM để lấy danh sách Handle của những người trong phòng
