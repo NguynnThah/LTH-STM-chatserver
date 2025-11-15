@@ -24,7 +24,7 @@ serverPort :: String
 serverPort = "8080" 
 
 chaosRoom :: String
-chaosRoom = "#chaos" 
+chaosRoom = "#LTH-ChatServer-STM" 
 
 ----------------------------------------------------
 -- HÀM MAIN
@@ -82,7 +82,7 @@ chaosLoop handle username = forever $ do
         7 -> Just $ "JOIN " ++ chaosRoom
         8 -> Just $ "JOIN " ++ chaosRoom
         
-        _ -> Just $ "MSG " ++ chaosRoom ++ " " ++ username ++ " đang spam"
+        _ -> Just $ "MSG " ++ chaosRoom ++ " " ++ username ++ " dang spam"
   
   case actionMessage of
     Just msg -> do
